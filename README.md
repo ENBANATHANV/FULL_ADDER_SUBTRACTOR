@@ -2,19 +2,22 @@
 ### REG NO : 24001750
 ### EXPERIMENT-3 : FULL ADDER AND SUBTRACTOR
 
+
 ### AIM:
 
 To design a Full Adder and Full Subtractor circuit and verify its truth table in Quartus using Verilog programming.
 
-### Equipments Required:
+
+### EQUIPMENTS REQURIED:
 
 Hardware – PCs, Cyclone II , USB flasher
 
 Software – Quartus prime
 
-### Full Adder and Full Subtractor
 
-### Full Adder
+### FULL ADDER AND FULL SUBTRACTOR
+
+### FULL ADDER :
 
 Full adder is a digital circuit used to calculate the sum of three binary bits. It consists of three inputs and two outputs. Two of the input variables, denoted by A and B, represent the two significant bits to be added. The third input, Cin, represents the carry from the previous lower significant position. Two outputs are necessary because the arithmetic sum of three binary digits ranges in value from 0 to 3, and binary 2 or 3 needs two digits. The two outputs are sum and carry.
 
@@ -24,9 +27,8 @@ Carry = AB + ACin + BCin
 
 ![image](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/154305477/0f30ba51-5ffb-4198-845f-18e054f675e7)
 
-### Figure -1 FULL ADDER
 
-### Full Subtractor
+### FULL SUBTRACTOR :
 
 A full subtractor is a combinational circuit that performs subtraction involving three bits, namely minuend, subtrahend, and borrow-in . It accepts three inputs: minuend, subtrahend and a borrow bit and it produces two outputs: difference and borrow.
 
@@ -36,7 +38,7 @@ Diff = A ⊕ B ⊕ Bin
 
 Borrow out = A'Bin + A'B + BBin
 
-### Procedure:
+### PROCEDURE:
 
 #### Full Adder
 Inputs: Three inputs: A, B (the two bits to be added), and Cin (the carry-in bit from a previous
@@ -51,7 +53,7 @@ bit). Logic: Diff = A ^ B ^ Bin (XOR operation). Bout = (~A & B) | ((~A | B) & B
 if A is less than B or needs a borrow). Both circuits follow simple XOR logic for the primary result
 and AND-OR logic to determine carry or borrow conditions.
 
-### Program:
+### PROGRAM:
 ```
 module FULL_ADDER_AND_SUBTRACTOR(a,b,cin,bin,sum,carry,difference,borrow);
 input a,b,cin,bin;
@@ -62,7 +64,7 @@ assign difference=a^b^bin;
 assign borrow=~(a^b)&bin|(~a)&b;
 endmodule
 ```
-### Truthtable:
+### TRUTHTABLE :
 ![bfb33343-af6c-424b-80a2-d230056327db](https://github.com/user-attachments/assets/d095bfda-27e4-4e9c-ac1c-ed6747739af3)
 ![40ac907a-9673-450c-8923-240871d05c68](https://github.com/user-attachments/assets/cdb176a8-a1b0-4b05-8672-cfddf3a64ea6)
 
@@ -75,7 +77,7 @@ endmodule
 
 
 
-### Result:
+### RESULT:
 
 The Full Adder and Full Subtractor circuits are designed and the truth tables is verified using
 Quartus software.
